@@ -1,1 +1,20 @@
 include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    - prefer_const_constructors
+    - prefer_const_literals_to_create_immutables
+    - prefer_const_declarations
+    - avoid_unnecessary_containers
+    - use_key_in_widget_constructors
+    - prefer_final_fields
+    - avoid_positional_boolean_parameters
+    - require_trailing_commas
+    - avoid_print
+    - unnecessary_null_checks
+    - avoid_redundant_argument_values
+    - use_function_type_syntax_for_parameters
+
+    - no_logic_in_create_state
+    - sort_child_properties_last
+    - prefer_mixin
