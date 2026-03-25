@@ -1,19 +1,19 @@
-class Developers {
+class Developer {
   final String id;
   final String developerName;
   final bool attended;
 
-  Developers({
+  Developer({
     required this.id,
     required this.developerName,
     required this.attended,
   });
 
-  Developers copyWith({
+  Developer copyWith({
     String? id,
     String? developerName,
     bool attended = false,
-  }) => Developers(
+  }) => Developer(
     id: id ?? this.id,
     developerName: developerName ?? this.developerName,
     attended: attended,

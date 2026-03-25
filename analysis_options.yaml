@@ -14,7 +14,7 @@ linter:
     - unnecessary_null_checks
     - avoid_redundant_argument_values
     - use_function_type_syntax_for_parameters
-
+    - prefer_relative_imports 
     - no_logic_in_create_state
     - sort_child_properties_last
     - prefer_mixin

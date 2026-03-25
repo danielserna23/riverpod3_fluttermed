@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:riverpod_3/presentation/widgets/custom_riv.dart';
+
+import '../../providers/03_developers/developers_provider.dart';
+import '../../widgets/custom_riv.dart';
 
 class DevelopersListScreen extends StatelessWidget {
   const DevelopersListScreen({super.key});
@@ -31,20 +33,21 @@ class _DevelopersListView extends StatelessWidget {
         const CustomRiv(size: 100, rivUrl: 'assets/flutter-dash-ticket.riv'),
         SegmentedButton(
           segments: const [
-            ButtonSegment(value: 'all', icon: Text('Todos')),
-            ButtonSegment(value: 'completed', icon: Text('Asistieron')),
-            ButtonSegment(value: 'pending', icon: Text('No asistieron')),
+            ButtonSegment(value: DevsFilter.all, icon: Text('Todos')),
+            ButtonSegment(value: DevsFilter.attended, icon: Text('Asistieron')),
+            ButtonSegment(value: DevsFilter.absentee, icon: Text('Ausentes')),
           ],
-          selected: const <String>{'all'},
+          selected: const <DevsFilter>{DevsFilter.all},
           onSelectionChanged: (value) {},
         ),
         const SizedBox(height: 5),
 
         Expanded(
           child: ListView.builder(
+            itemCount: 10,
             itemBuilder: (context, index) {
               return SwitchListTile(
-                title: const Text('Juan carlos'),
+                title: const Text('Developer name'),
                 value: true,
                 onChanged: (value) {},
               );
