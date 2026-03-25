@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:riverpod_3/presentation/widgets/custom_riv.dart';
 
 import '../../widgets/widgets.dart';
 

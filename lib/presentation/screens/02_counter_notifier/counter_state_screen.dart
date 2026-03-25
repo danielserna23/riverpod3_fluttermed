@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:riverpod_3/presentation/widgets/custom_counter.dart';
-import 'package:riverpod_3/presentation/widgets/custom_riv.dart';
-import 'package:riverpod_3/presentation/widgets/custom_text.dart';
+
+import '../../widgets/widgets.dart';
 
 class CounterStateScreen extends StatelessWidget {
   const CounterStateScreen({super.key});
