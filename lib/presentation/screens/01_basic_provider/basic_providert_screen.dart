@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:riverpod_3/presentation/widgets/custom_riv.dart';
-import 'package:riverpod_3/presentation/widgets/widgets.dart';
+
+import '../../widgets/widgets.dart';
 
 class BasicProvidertScreen extends StatelessWidget {
   const BasicProvidertScreen({super.key});

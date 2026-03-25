@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../providers/03_developers/developers_provider.dart';
-import '../../widgets/custom_riv.dart';
+import '../../providers/providers.dart';
+import '../../widgets/widgets.dart';
 
 class DevelopersListScreen extends StatelessWidget {
   const DevelopersListScreen({super.key});
