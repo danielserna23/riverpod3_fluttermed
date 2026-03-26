@@ -13,8 +13,8 @@ class DevelopersListScreen extends ConsumerWidget {
       appBar: AppBar(title: const Text('Flutter Conf Medellín')),
       body: const _DevelopersListView(),
       floatingActionButton: FloatingActionButton(
+        onPressed: ref.read(devsListProvider.notifier).addDeveloper,
         child: const Icon(Icons.add),
-        onPressed: () {},
       ),
     );
   }
@@ -25,6 +25,8 @@ class _DevelopersListView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final devsFilter = ref.watch(devsFilterProvider);
+    final devsList = ref.watch(devsListProvider);
     return Column(
       children: [
         const ListTile(
@@ -38,19 +40,24 @@ class _DevelopersListView extends ConsumerWidget {
             ButtonSegment(value: DevsFilter.attended, icon: Text('Asistieron')),
             ButtonSegment(value: DevsFilter.absentee, icon: Text('Ausentes')),
           ],
-          selected: const <DevsFilter>{DevsFilter.all},
-          onSelectionChanged: (value) {},
+          selected: <DevsFilter>{devsFilter},
+          onSelectionChanged: (value) {
+            ref.read(devsFilterProvider.notifier).toogleFilter(value);
+          },
         ),
         const SizedBox(height: 5),
 
         Expanded(
           child: ListView.builder(
-            itemCount: 10,
+            itemCount: devsList.length,
             itemBuilder: (context, index) {
+              final dev = devsList[index];
               return SwitchListTile(
-                title: const Text('Developer name'),
-                value: true,
-                onChanged: (value) {},
+                title: Text(dev.developerName),
+                value: dev.attended,
+                onChanged: (value) {
+                  ref.read(devsListProvider.notifier).toogleAttended(dev.id);
+                },
               );
             },
           ),
