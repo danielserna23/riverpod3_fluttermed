@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class CustomCounter extends StatelessWidget {
   final int count;
@@ -16,16 +17,16 @@ class CustomCounter extends StatelessWidget {
   }
 }
 
-class CustomCounterR extends StatelessWidget {
+class CustomCounterR extends ConsumerWidget {
   final VoidCallback? addCount;
   const CustomCounterR({super.key, this.addCount});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     print('Contador se construye *************');
     return TextButton.icon(
       onPressed: addCount,
-      label: const Text('0', style: const TextStyle(fontSize: 100)),
+      label: const Text('0', style: TextStyle(fontSize: 100)),
       icon: const Icon(Icons.add, size: 50),
     );
   }

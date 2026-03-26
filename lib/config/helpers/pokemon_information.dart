@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 class PokemonInformation {
   static Future<String> getPokemonName(int pokemonId) async {
     final dio = Dio();
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 1));
 
     try {
       final response = await dio.get(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class CustomText extends StatelessWidget {
   final String name;
@@ -14,11 +15,11 @@ class CustomText extends StatelessWidget {
   }
 }
 
-class CustomTextR extends StatelessWidget {
+class CustomTextR extends ConsumerWidget {
   const CustomTextR({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     print('Texto se reconstruye......');
     return const Text(
       'Nombre',
