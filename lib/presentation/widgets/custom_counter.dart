@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../providers/02_counter_notifier/counter_notifier_provider.dart';
+
 class CustomCounter extends StatelessWidget {
   final int count;
   final VoidCallback? addCount;
@@ -23,10 +25,11 @@ class CustomCounterR extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final counter = ref.watch(counterStateProvider);
     print('Contador se construye *************');
     return TextButton.icon(
       onPressed: addCount,
-      label: const Text('0', style: TextStyle(fontSize: 100)),
+      label: Text('$counter', style: TextStyle(fontSize: 100)),
       icon: const Icon(Icons.add, size: 50),
     );
   }

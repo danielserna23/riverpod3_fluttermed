@@ -58,3 +58,13 @@ class DevsListNotifier extends Notifier<List<Developer>> {
     }).toList();
   }
 }
+
+// ============================================================
+// TASK: Crea un provider que filtre la lista de programadores
+// mostrando las tres formas de todos, asistentes y faltantes
+// ============================================================
+// final devsProvider = Provider<DevsFilter>((ref) {
+  //Agrega la lógica faltante dependiendo del filtro
+  //recuerda que puedes consultar los otros providers usando el ref
+  //final currentFilter = ref.watch(devsFilterProvider);
+// });

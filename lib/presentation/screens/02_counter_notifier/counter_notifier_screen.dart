@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../providers/providers.dart';
 import '../../widgets/widgets.dart';
 
 class CounterNotifierScreen extends ConsumerWidget {
@@ -30,7 +31,11 @@ class CounterNotifierScreen extends ConsumerWidget {
                 );
               },
             ),
-            const CustomCounter(count: 0),
+            CustomCounterR(
+              addCount: () {
+                ref.read(counterStateProvider.notifier).increment();
+              },
+            ),
             const CustomText(name: 'Nombre'),
             const Spacer(flex: 2),
           ],

@@ -9,4 +9,7 @@ final pokemonNameProvider = FutureProvider.autoDispose<String>((ref) async {
   return pokemonName;
 });
 
+//Task: Transforma este StateProvider
+//en un NotifierProvider para un mejor manejo del estado
+
 final pokemonIdProvider = StateProvider.autoDispose<int>((ref) => 1);
