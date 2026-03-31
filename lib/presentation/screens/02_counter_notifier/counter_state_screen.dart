@@ -15,7 +15,6 @@ class CounterStateScreen extends StatelessWidget {
             Spacer(),
             CustomRiv(size: 150, rivUrl: 'assets/dart_flutter.riv'),
             CustomCounter(count: 0),
-            CustomText(name: 'Nombre'),
             Spacer(flex: 2),
           ],
         ),

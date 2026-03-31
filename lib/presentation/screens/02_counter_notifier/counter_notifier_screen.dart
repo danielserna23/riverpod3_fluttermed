@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../widgets/widgets.dart';
 
-class CounterNotifierScreen extends StatelessWidget {
+class CounterNotifierScreen extends ConsumerWidget {
   const CounterNotifierScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final bool isDark = true;
 
     return Scaffold(
@@ -22,8 +23,7 @@ class CounterNotifierScreen extends StatelessWidget {
                 size: 100,
               ),
             ),
-            const CustomCounter(count: 0),
-            const CustomText(name: 'Nombre'),
+            const CustomCounterR(),
             const Spacer(flex: 2),
           ],
         ),

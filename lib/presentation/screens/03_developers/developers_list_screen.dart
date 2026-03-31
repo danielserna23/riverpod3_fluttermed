@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../providers/providers.dart';
 import '../../widgets/widgets.dart';
 
-class DevelopersListScreen extends StatelessWidget {
+class DevelopersListScreen extends ConsumerWidget {
   const DevelopersListScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(title: const Text('Flutter Conf Medellín')),
       body: const _DevelopersListView(),
@@ -19,11 +20,11 @@ class DevelopersListScreen extends StatelessWidget {
   }
 }
 
-class _DevelopersListView extends StatelessWidget {
+class _DevelopersListView extends ConsumerWidget {
   const _DevelopersListView();
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Column(
       children: [
         const ListTile(

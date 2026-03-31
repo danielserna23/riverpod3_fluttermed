@@ -18,11 +18,6 @@ class HomeScreen extends StatelessWidget {
             location: '/basic_provider',
           ),
           CustomTile(
-            title: 'Counter State',
-            subTitle: 'Menejo del setState',
-            location: '/counter_state',
-          ),
-          CustomTile(
             title: 'Counter Notifier',
             subTitle: 'Menejo del Notifier de Riverpod',
             location: '/counter_notifier',
