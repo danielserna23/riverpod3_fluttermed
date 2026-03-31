@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../widgets/widgets.dart';
 
-class CounterNotifierScreen extends ConsumerWidget {
+class CounterNotifierScreen extends StatelessWidget {
   const CounterNotifierScreen({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final bool isDark = true;
 
     return Scaffold(
@@ -18,14 +17,12 @@ class CounterNotifierScreen extends ConsumerWidget {
             onPressed: () {},
             icon: Icon(
               isDark ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
-              size: 40,
+              size: 30,
             ),
           ),
         ],
       ),
-      body: const Center(
-        child: Column(children: [Spacer(), CustomCounterR(), Spacer(flex: 2)]),
-      ),
+      body: const Center(child: Center(child: CustomCounter(count: 0))),
     );
   }
 }

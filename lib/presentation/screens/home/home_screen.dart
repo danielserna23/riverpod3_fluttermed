@@ -13,11 +13,6 @@ class HomeScreen extends StatelessWidget {
         children: const [
           CustomRiv(rivUrl: 'assets/flutter-dash.riv'),
           CustomTile(
-            title: 'State Simple',
-            subTitle: 'Un state de sólo lectura',
-            location: '/basic_provider',
-          ),
-          CustomTile(
             title: 'Counter Notifier',
             subTitle: 'Menejo del Notifier de Riverpod',
             location: '/counter_notifier',
@@ -28,15 +23,16 @@ class HomeScreen extends StatelessWidget {
             location: '/developers',
           ),
           CustomTile(
-            title: 'Future Provider',
-            subTitle: 'Mantener el estado de un future y su retorno',
-            location: '/future_provider',
-          ),
-          CustomTile(
             title: 'Async Notifier',
             subTitle: 'Nueva forma de manejar los Async',
             location: '/async_notifier',
           ),
+          CustomTile(
+            title: 'Future Provider',
+            subTitle: 'Mantener el estado de un future y su retorno',
+            location: '/future_provider',
+          ),
+
           CustomTile(
             title: 'Stream Provider',
             subTitle: 'Mantener el estado de un Stream y sus emisiones',
