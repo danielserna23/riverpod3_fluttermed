@@ -11,22 +11,20 @@ class CounterNotifierScreen extends ConsumerWidget {
     final bool isDark = true;
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Notifier')),
-      body: Center(
-        child: Column(
-          children: [
-            const Spacer(),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                isDark ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
-                size: 100,
-              ),
+      appBar: AppBar(
+        title: const Text('Notifier'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              isDark ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
+              size: 40,
             ),
-            const CustomCounterR(),
-            const Spacer(flex: 2),
-          ],
-        ),
+          ),
+        ],
+      ),
+      body: const Center(
+        child: Column(children: [Spacer(), CustomCounterR(), Spacer(flex: 2)]),
       ),
     );
   }
